@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Dalgyűjtemény</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      text-align: left;
+      padding: 20px;
+    }
+    .song-container {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      white-space: pre-wrap;
+      margin-bottom: 20px;
+    }
+    .controls button, .song-list button, .song-container button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background: #007BFF;
+      color: white;
+      cursor: pointer;
+    }
+    .controls button:hover, .song-list button:hover, .song-container button:hover {
+      background: #0056b3;
+    }
+    .chord {
+      font-weight: bold;
+      color: darkred;
+    }
+    .song-list {
+      margin: 20px auto;
+      max-width: 400px;
+      text-align: left;
+    }
+    .song-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    .song-list li {
+      background: white;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dalgyűjtemény</h1>
+
+  <div class="song-list">
+    <h2>Elérhető dalok</h2>
+    <ul id="allSongs"></ul>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevSong()">◀ Előző</button>
+    <button onclick="nextSong()">Következő ▶</button>
+    <button onclick="transpose(-1)">-1 félhang</button>
+    <button onclick="transpose(1)">+1 félhang</button>
+  </div>
+
+  <div class="song-container" id="song"></div>
+
+  <script src="app.js"></script>
+  <script src="lista.js"></script>
+</body>
+</html>
