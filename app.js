@@ -2,7 +2,7 @@ let selectedSongs = [];    // kiválasztott dalok (lista.js tölti fel)
 let currentSong = 0;
 let transposeValue = 0;
 
-const chords = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B","H"];
+const chords = ["C","C#","D","D#","E","F","F#","G","G#","A","B","H"];
 //const chords = ["C","C#","Db","D","D#","Eb","E","F","F#","Gb","G","G#","Ab","A","A#","Bb","B"];
 function renderSong() {
   if (selectedSongs.length === 0) {
@@ -22,6 +22,7 @@ function renderSong() {
     }
   }).join("\n");
 
+ 
   document.getElementById("song").innerHTML =
     `<h2>${selectedSongs[currentSong].title}</h2><br>` +
     rendered +
